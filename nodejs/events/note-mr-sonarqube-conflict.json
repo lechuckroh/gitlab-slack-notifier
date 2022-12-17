@@ -1,0 +1,146 @@
+{
+  "body": {
+    "object_kind": "note",
+    "event_type": "note",
+    "user": {
+      "id": 1,
+      "name": "Administrator",
+      "username": "root",
+      "avatar_url": "http://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61?s=40\u0026d=identicon",
+      "email": "admin@example.com"
+    },
+    "project_id": 5,
+    "project": {
+      "id": 5,
+      "name": "Gitlab Test",
+      "description": "Aut reprehenderit ut est.",
+      "web_url": "http://example.com/gitlab-org/gitlab-test",
+      "avatar_url": null,
+      "git_ssh_url": "git@example.com:gitlab-org/gitlab-test.git",
+      "git_http_url": "http://example.com/gitlab-org/gitlab-test.git",
+      "namespace": "Gitlab Org",
+      "visibility_level": 10,
+      "path_with_namespace": "gitlab-org/gitlab-test",
+      "default_branch": "master",
+      "homepage": "http://example.com/gitlab-org/gitlab-test",
+      "url": "http://example.com/gitlab-org/gitlab-test.git",
+      "ssh_url": "git@example.com:gitlab-org/gitlab-test.git",
+      "http_url": "http://example.com/gitlab-org/gitlab-test.git"
+    },
+    "repository": {
+      "name": "Gitlab Test",
+      "url": "http://localhost/gitlab-org/gitlab-test.git",
+      "description": "Aut reprehenderit ut est.",
+      "homepage": "http://example.com/gitlab-org/gitlab-test"
+    },
+    "object_attributes": {
+      "id": 1244,
+      "note": "## SonarQube Code Analysis  \n## Quality Gate passed  \n[![Quality Gate passed](https://sonarqube.example.com/static/developer-server/checks/QualityGateBadge/passed-16px.png 'Quality Gate passed')](https://sonarqube.example.com/dashboard?id=myproject&pullRequest=1313)\n\n\n## Additional information\n\n*The following metrics might not affect the Quality Gate status but improving*  \n*them will improve your project code quality and security.*\n\n### 0 Issues\n\n[![Bug](https://sonarqube.example.com/static/developer-server/common/bug-16px.png 'Bug')](https://sonarqube.example.com/project/issues?id=myproject&pullRequest=1313&resolved=false&types=BUG) [![A](https://sonarqube.example.com/static/developer-server/checks/RatingBadge/A-16px.png 'A')](https://sonarqube.example.com/project/issues?id=myproject&pullRequest=1313&resolved=false&types=BUG) [0 Bugs](https://sonarqube.example.com/project/issues?id=myproject&pullRequest=1313&resolved=false&types=BUG)  \n[![Vulnerability](https://sonarqube.example.com/static/developer-server/common/vulnerability-16px.png 'Vulnerability')](https://sonarqube.example.com/project/issues?id=myproject&pullRequest=1313&resolved=false&types=VULNERABILITY) [![A](https://sonarqube.example.com/static/developer-server/checks/RatingBadge/A-16px.png 'A')](https://sonarqube.example.com/project/issues?id=myproject&pullRequest=1313&resolved=false&types=VULNERABILITY) [0 Vulnerabilities](https://sonarqube.example.com/project/issues?id=myproject&pullRequest=1313&resolved=false&types=VULNERABILITY)  \n[![Security Hotspot](https://sonarqube.example.com/static/developer-server/common/security_hotspot-16px.png 'Security Hotspot')](https://sonarqube.example.com/security_hotspots?id=myproject&pullRequest=1313) [![A](https://sonarqube.example.com/static/developer-server/checks/RatingBadge/A-16px.png 'A')](https://sonarqube.example.com/security_hotspots?id=myproject&pullRequest=1313) [0 Security Hotspots](https://sonarqube.example.com/security_hotspots?id=myproject&pullRequest=1313)  \n[![Code Smell](https://sonarqube.example.com/static/developer-server/common/code_smell-16px.png 'Code Smell')](https://sonarqube.example.com/project/issues?id=myproject&pullRequest=1313&resolved=false&types=CODE_SMELL) [![A](https://sonarqube.example.com/static/developer-server/checks/RatingBadge/A-16px.png 'A')](https://sonarqube.example.com/project/issues?id=myproject&pullRequest=1313&resolved=false&types=CODE_SMELL) [0 Code Smells](https://sonarqube.example.com/project/issues?id=myproject&pullRequest=1313&resolved=false&types=CODE_SMELL)\n\n### Coverage and Duplications\n\n[![0.0%](https://sonarqube.example.com/static/developer-server/checks/CoverageChart/0-16px.png '0.0%')](https://sonarqube.example.com/component_measures?id=myproject&pullRequest=1313&metric=new_coverage&view=list) [0.0% Coverage](https://sonarqube.example.com/component_measures?id=myproject&pullRequest=1313&metric=new_coverage&view=list) (0.0% Estimated after merge)  \n[![0.0%](https://sonarqube.example.com/static/developer-server/checks/Duplications/3-16px.png '0.0%')](https://sonarqube.example.com/component_measures?id=myproject&pullRequest=1313&metric=new_duplicated_lines_density&view=list) [0.0% Duplication](https://sonarqube.example.com/component_measures?id=myproject&pullRequest=1313&metric=new_duplicated_lines_density&view=list) (0.0% Estimated after merge)",
+      "noteable_type": "MergeRequest",
+      "author_id": 1,
+      "created_at": "2015-05-17 18:21:36 UTC",
+      "updated_at": "2015-05-17 18:21:36 UTC",
+      "project_id": 5,
+      "attachment": null,
+      "line_code": null,
+      "commit_id": "",
+      "noteable_id": 7,
+      "system": false,
+      "st_diff": null,
+      "url": "http://example.com/gitlab-org/gitlab-test/merge_requests/1#note_1244"
+    },
+    "merge_request": {
+      "id": 7,
+      "target_branch": "markdown",
+      "source_branch": "master",
+      "source_project_id": 5,
+      "author_id": 6,
+      "assignee_id": 28,
+      "title": "Tempora et eos debitis quae laborum et.",
+      "created_at": "2015-03-01 20:12:53 UTC",
+      "updated_at": "2015-03-21 18:27:27 UTC",
+      "milestone_id": 11,
+      "state": "opened",
+      "merge_status": "cannot_be_merged",
+      "target_project_id": 5,
+      "iid": 1,
+      "description": "Et voluptas corrupti assumenda temporibus. Architecto cum animi eveniet amet asperiores. Vitae numquam voluptate est natus sit et ad id.",
+      "position": 0,
+      "labels": [
+        {
+          "id": 25,
+          "title": "Afterpod",
+          "color": "#3e8068",
+          "project_id": null,
+          "created_at": "2019-06-05T14:32:20.211Z",
+          "updated_at": "2019-06-05T14:32:20.211Z",
+          "template": false,
+          "description": null,
+          "type": "GroupLabel",
+          "group_id": 4
+        },
+        {
+          "id": 86,
+          "title": "Element",
+          "color": "#231afe",
+          "project_id": 4,
+          "created_at": "2019-06-05T14:32:20.637Z",
+          "updated_at": "2019-06-05T14:32:20.637Z",
+          "template": false,
+          "description": null,
+          "type": "ProjectLabel",
+          "group_id": null
+        }
+      ],
+      "source": {
+        "name": "Gitlab Test",
+        "description": "Aut reprehenderit ut est.",
+        "web_url": "http://example.com/gitlab-org/gitlab-test",
+        "avatar_url": null,
+        "git_ssh_url": "git@example.com:gitlab-org/gitlab-test.git",
+        "git_http_url": "http://example.com/gitlab-org/gitlab-test.git",
+        "namespace": "Gitlab Org",
+        "visibility_level": 10,
+        "path_with_namespace": "gitlab-org/gitlab-test",
+        "default_branch": "master",
+        "homepage": "http://example.com/gitlab-org/gitlab-test",
+        "url": "http://example.com/gitlab-org/gitlab-test.git",
+        "ssh_url": "git@example.com:gitlab-org/gitlab-test.git",
+        "http_url": "http://example.com/gitlab-org/gitlab-test.git"
+      },
+      "target": {
+        "name": "Gitlab Test",
+        "description": "Aut reprehenderit ut est.",
+        "web_url": "http://example.com/gitlab-org/gitlab-test",
+        "avatar_url": null,
+        "git_ssh_url": "git@example.com:gitlab-org/gitlab-test.git",
+        "git_http_url": "http://example.com/gitlab-org/gitlab-test.git",
+        "namespace": "Gitlab Org",
+        "visibility_level": 10,
+        "path_with_namespace": "gitlab-org/gitlab-test",
+        "default_branch": "master",
+        "homepage": "http://example.com/gitlab-org/gitlab-test",
+        "url": "http://example.com/gitlab-org/gitlab-test.git",
+        "ssh_url": "git@example.com:gitlab-org/gitlab-test.git",
+        "http_url": "http://example.com/gitlab-org/gitlab-test.git"
+      },
+      "last_commit": {
+        "id": "562e173be03b8ff2efb05345d12df18815438a4b",
+        "message": "Merge branch 'another-branch' into 'master'\n\nCheck in this test\n",
+        "timestamp": "2015-04-08T21: 00:25-07:00",
+        "url": "http://example.com/gitlab-org/gitlab-test/commit/562e173be03b8ff2efb05345d12df18815438a4b",
+        "author": {
+          "name": "John Smith",
+          "email": "john@example.com"
+        }
+      },
+      "work_in_progress": false,
+      "assignee": {
+        "name": "User1",
+        "username": "user1",
+        "avatar_url": "http://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61?s=40\u0026d=identicon"
+      },
+      "detailed_merge_status": "checking"
+    }
+  }
+}
