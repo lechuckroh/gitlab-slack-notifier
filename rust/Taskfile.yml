@@ -1,0 +1,28 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+
+  _install-darwin:
+    cmds:
+      - brew tap cargo-lambda/cargo-lambda
+      - brew install cargo-lambda
+
+  _install-linux:
+    cmds:
+      - pip3 install cargo-lambda
+
+  install:
+    desc: "install required packages"
+    cmds:
+      - task: _install-{{OS}}
+
+  build:
+    desc: "Build app binary"
+    cmds:
+      - cargo lambda build --release --arm64 --output-format zip
+
+  test:
+    cmds:
+      - cargo test -- --nocapture

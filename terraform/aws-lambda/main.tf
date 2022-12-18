@@ -9,7 +9,8 @@ terraform {
 provider "aws" {
   default_tags {
     tags = {
-      Terraform = true
+      Terraform   = true
+      Application = "gitlab-slack-notifier"
     }
   }
 }
@@ -73,20 +74,27 @@ resource "aws_iam_role_policy_attachment" "lambda_logs" {
 # Lambda
 ##########################################
 
-data "archive_file" "file" {
-  type        = "zip"
-  source_dir  = var.source_dir
-  output_path = var.output_path
+locals {
+  nodejs_count = var.lambda_language == "nodejs" ? 1 : 0
+  rust_count   = var.lambda_language == "rust" ? 1 : 0
 }
 
-resource "aws_lambda_function" "fn" {
-  function_name    = var.function_name
+data "archive_file" "nodejs" {
+  count       = local.nodejs_count
+  type        = "zip"
+  source_dir  = var.nodejs_source_dir
+  output_path = var.nodejs_output_path
+}
+
+resource "aws_lambda_function" "nodejs" {
+  count            = local.nodejs_count
+  function_name    = var.nodejs_function_name
   role             = aws_iam_role.lambda_exec.arn
-  filename         = data.archive_file.file.output_path
-  source_code_hash = data.archive_file.file.output_base64sha256
-  handler          = var.handler_name
-  runtime          = var.runtime
-  architectures    = [var.architecture]
+  filename         = data.archive_file.nodejs.output_path
+  source_code_hash = data.archive_file.nodejs.output_base64sha256
+  handler          = var.nodejs_handler_name
+  runtime          = var.nodejs_runtime
+  architectures    = var.nodejs_architectures
   publish          = true
 
   environment {
@@ -94,13 +102,64 @@ resource "aws_lambda_function" "fn" {
       SLACK_INCOMING_WEBHOOK_PATH = var.slack_incoming_webhook_path
     }
   }
+
+  tags = {
+    Language = "node.js"
+  }
 }
 
-resource "aws_lambda_function_url" "webhook_latest" {
+resource "aws_lambda_function_url" "nodejs" {
+  count              = local.nodejs_count
   authorization_type = "NONE"
-  function_name      = aws_lambda_function.fn.function_name
+  function_name      = aws_lambda_function.nodejs.function_name
   cors {
     allow_methods = ["*"]
     allow_origins = ["*"]
+  }
+
+  tags = {
+    Language = "node.js"
+  }
+}
+
+data "local_file" "rust" {
+  count    = local.rust_count
+  filename = var.rust_zip_filename
+}
+
+resource "aws_lambda_function" "rust" {
+  count            = local.rust_count
+  function_name    = var.rust_function_name
+  role             = aws_iam_role.lambda_exec.arn
+  filename         = data.local_file.rust.filename
+  source_code_hash = data.local_file.rust.content_base64
+  handler          = var.rust_handler_name
+  runtime          = var.rust_runtime
+  architectures    = var.rust_architectures
+  publish          = true
+
+  environment {
+    variables = {
+      RUST_BACKTRACE              = 1
+      SLACK_INCOMING_WEBHOOK_PATH = var.slack_incoming_webhook_path
+    }
+  }
+
+  tags = {
+    Language = "rust"
+  }
+}
+
+resource "aws_lambda_function_url" "rust" {
+  count              = local.rust_count
+  authorization_type = "NONE"
+  function_name      = aws_lambda_function.rust.function_name
+  cors {
+    allow_methods = ["*"]
+    allow_origins = ["*"]
+  }
+
+  tags = {
+    Language = "rust"
   }
 }

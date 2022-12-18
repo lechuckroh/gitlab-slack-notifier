@@ -119,7 +119,7 @@ beforeAll(() => {
 describe("MergeRequest event", function () {
   it("verifies merge request open", async () => {
     const payload = JSON.parse(
-      fs.readFileSync("./events/mr-open.json", "utf8")
+      fs.readFileSync("../events/mr-open.json", "utf8")
     );
     const event = createLambdaEvent(JSON.stringify(payload.body));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
@@ -136,7 +136,7 @@ describe("MergeRequest event", function () {
 
   it("verifies merge request approved", async () => {
     const payload = JSON.parse(
-      fs.readFileSync("./events/mr-approve.json", "utf8")
+      fs.readFileSync("../events/mr-approve.json", "utf8")
     );
     const event = createLambdaEvent(JSON.stringify(payload.body));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
@@ -153,7 +153,7 @@ describe("MergeRequest event", function () {
 
   it("verifies merge request merged", async () => {
     const payload = JSON.parse(
-      fs.readFileSync("./events/mr-merge.json", "utf8")
+      fs.readFileSync("../events/mr-merge.json", "utf8")
     );
     const event = createLambdaEvent(JSON.stringify(payload.body));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
@@ -172,7 +172,7 @@ describe("MergeRequest event", function () {
 describe("Note event", function () {
   it("verifies comment on merge request with labels and conflict", async () => {
     const payload = JSON.parse(
-      fs.readFileSync("./events/note-mr-conflict.json", "utf8")
+      fs.readFileSync("../events/note-mr-conflict.json", "utf8")
     );
     const event = createLambdaEvent(JSON.stringify(payload.body));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
@@ -189,7 +189,7 @@ describe("Note event", function () {
 
   it("ignores sonarqube code analysis", async () => {
     const payload = JSON.parse(
-      fs.readFileSync("./events/note-mr-sonarqube-can-be-merged.json", "utf8")
+      fs.readFileSync("../events/note-mr-sonarqube-can-be-merged.json", "utf8")
     );
     const event = createLambdaEvent(JSON.stringify(payload.body));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
@@ -202,7 +202,7 @@ describe("Note event", function () {
 
   it("verifies sonarqybe code analysis with conflict", async () => {
     const payload = JSON.parse(
-      fs.readFileSync("./events/note-mr-sonarqube-conflict.json", "utf8")
+      fs.readFileSync("../events/note-mr-sonarqube-conflict.json", "utf8")
     );
     const event = createLambdaEvent(JSON.stringify(payload.body));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
@@ -221,7 +221,7 @@ describe("Note event", function () {
 describe("Pipeline event", function () {
   it("verifies failed pipeline", async () => {
     const payload = JSON.parse(
-      fs.readFileSync("./events/pipeline-failed.json", "utf8")
+      fs.readFileSync("../events/pipeline-failed.json", "utf8")
     );
     const event = createLambdaEvent(JSON.stringify(payload.body));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
