@@ -1,0 +1,106 @@
+{
+  "body": {
+    "object_kind": "tag_push",
+    "event_name": "tag_push",
+    "before": "0000000000000000000000000000000000000000",
+    "after": "e28fa45b52fa2f8f639554e88d5c0834a05462d1",
+    "ref": "refs/tags/tag1",
+    "checkout_sha": "e28fa45b52fa2f8f639554e88d5c0834a05462d1",
+    "message": "",
+    "user_id": 484254,
+    "user_name": "Lechuck Roh",
+    "user_username": "lechuckroh",
+    "user_email": "",
+    "user_avatar": "https://gitlab.com/uploads/-/system/user/avatar/484254/avatar.png",
+    "project_id": 42038426,
+    "project": {
+      "id": 42038426,
+      "name": "gitlab-slack-notifier",
+      "description": "GitLab Webhook Slack notifier with custom message and filtering",
+      "web_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
+      "namespace": "Lechuck Roh",
+      "visibility_level": 20,
+      "path_with_namespace": "lechuckroh/gitlab-slack-notifier",
+      "default_branch": "master",
+      "ci_config_path": "",
+      "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+      "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git"
+    },
+    "commits": [
+      {
+        "id": "e28fa45b52fa2f8f639554e88d5c0834a05462d1",
+        "message": "Merge branch 'feature/nodejs' into develop",
+        "title": "Merge branch 'feature/nodejs' into develop",
+        "timestamp": "2022-12-17T21:45:20+09:00",
+        "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/commit/e28fa45b52fa2f8f639554e88d5c0834a05462d1",
+        "author": {
+          "name": "Lechuck Roh",
+          "email": "[REDACTED]"
+        },
+        "added": [
+          ".gitignore",
+          "nodejs/.eslintignore",
+          "nodejs/.eslintrc.js",
+          "nodejs/.gitignore",
+          "nodejs/.npmignore",
+          "nodejs/.prettierrc.js",
+          "nodejs/.prettierrc.json",
+          "nodejs/events/mr-approve.json",
+          "nodejs/events/mr-close.json",
+          "nodejs/events/mr-merge.json",
+          "nodejs/events/mr-open.json",
+          "nodejs/events/note-mr-can-be-merged.json",
+          "nodejs/events/note-mr-conflict.json",
+          "nodejs/events/note-mr-sonarqube-can-be-merged.json",
+          "nodejs/events/note-mr-sonarqube-conflict.json",
+          "nodejs/events/pipeline-failed.json",
+          "nodejs/jest.config.ts",
+          "nodejs/package.json",
+          "nodejs/src/app.ts",
+          "nodejs/src/config.ts",
+          "nodejs/src/handlers/build.ts",
+          "nodejs/src/handlers/events.ts",
+          "nodejs/src/handlers/handler.ts",
+          "nodejs/src/handlers/issue.ts",
+          "nodejs/src/handlers/merge-request.ts",
+          "nodejs/src/handlers/note.ts",
+          "nodejs/src/handlers/pipeline.ts",
+          "nodejs/src/handlers/push.ts",
+          "nodejs/src/handlers/slack.ts",
+          "nodejs/src/handlers/tag-push.ts",
+          "nodejs/src/handlers/users.ts",
+          "nodejs/src/handlers/wiki-page.ts",
+          "nodejs/tests/unit/lambda.test.ts",
+          "nodejs/tests/unit/slack.test.ts",
+          "nodejs/tsconfig.json",
+          "nodejs/yarn.lock",
+          "terraform/aws-lambda/Taskfile.yml",
+          "terraform/aws-lambda/main.tf",
+          "terraform/aws-lambda/output.tf",
+          "terraform/aws-lambda/vars.tf"
+        ],
+        "modified": [
+        ],
+        "removed": [
+        ]
+      }
+    ],
+    "total_commits_count": 1,
+    "push_options": {
+    },
+    "repository": {
+      "name": "gitlab-slack-notifier",
+      "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "description": "GitLab Webhook Slack notifier with custom message and filtering",
+      "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+      "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
+      "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "visibility_level": 20
+    }
+  }
+}

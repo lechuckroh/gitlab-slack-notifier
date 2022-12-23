@@ -1,0 +1,82 @@
+{
+  "body": {
+    "object_kind": "note",
+    "event_type": "note",
+    "user": {
+      "id": 484254,
+      "name": "Lechuck Roh",
+      "username": "lechuckroh",
+      "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/484254/avatar.png",
+      "email": "[REDACTED]"
+    },
+    "project_id": 42038426,
+    "project": {
+      "id": 42038426,
+      "name": "gitlab-slack-notifier",
+      "description": "GitLab Webhook Slack notifier with custom message and filtering",
+      "web_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
+      "namespace": "Lechuck Roh",
+      "visibility_level": 20,
+      "path_with_namespace": "lechuckroh/gitlab-slack-notifier",
+      "default_branch": "master",
+      "ci_config_path": "",
+      "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+      "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git"
+    },
+    "object_attributes": {
+      "attachment": null,
+      "author_id": 484254,
+      "change_position": null,
+      "commit_id": null,
+      "created_at": "2022-12-23 11:37:52 UTC",
+      "discussion_id": "db1f25295b8de20702479c3dd65cac0e3b3f851e",
+      "id": 1219968671,
+      "line_code": null,
+      "note": "comment on snippet\r\n\r\n@lechuckroh ",
+      "noteable_id": 2476370,
+      "noteable_type": "Snippet",
+      "original_position": null,
+      "position": null,
+      "project_id": 42038426,
+      "resolved_at": null,
+      "resolved_by_id": null,
+      "resolved_by_push": null,
+      "st_diff": null,
+      "system": false,
+      "type": null,
+      "updated_at": "2022-12-23 11:37:52 UTC",
+      "updated_by_id": null,
+      "description": "comment on snippet\r\n\r\n@lechuckroh ",
+      "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/snippets/2476370#note_1219968671"
+    },
+    "repository": {
+      "name": "gitlab-slack-notifier",
+      "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "description": "GitLab Webhook Slack notifier with custom message and filtering",
+      "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier"
+    },
+    "snippet": {
+      "id": 2476370,
+      "title": "new snippet",
+      "content": "interface Foo {\n    name: string;\n}",
+      "author_id": 484254,
+      "project_id": 42038426,
+      "created_at": "2022-12-23 11:37:38 UTC",
+      "updated_at": "2022-12-23 11:37:52 UTC",
+      "file_name": "example.ts",
+      "type": "ProjectSnippet",
+      "visibility_level": 0,
+      "description": "optional snippet description\n\n@lechuckroh\n",
+      "encrypted_secret_token": null,
+      "encrypted_secret_token_iv": null,
+      "secret": false,
+      "repository_read_only": false,
+      "secret_token": null
+    }
+  }
+}

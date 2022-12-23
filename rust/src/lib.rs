@@ -1,2 +1,3 @@
-mod events;
+mod webhook_events;
+mod slack;
 

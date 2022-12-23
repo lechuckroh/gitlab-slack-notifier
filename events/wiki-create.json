@@ -1,0 +1,47 @@
+{
+  "body": {
+    "object_kind": "wiki_page",
+    "user": {
+      "id": 484254,
+      "name": "Lechuck Roh",
+      "username": "lechuckroh",
+      "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/484254/avatar.png",
+      "email": "[REDACTED]"
+    },
+    "project": {
+      "id": 42038426,
+      "name": "gitlab-slack-notifier",
+      "description": "GitLab Webhook Slack notifier with custom message and filtering",
+      "web_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
+      "namespace": "Lechuck Roh",
+      "visibility_level": 20,
+      "path_with_namespace": "lechuckroh/gitlab-slack-notifier",
+      "default_branch": "master",
+      "ci_config_path": "",
+      "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+      "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git"
+    },
+    "wiki": {
+      "web_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/wikis/home",
+      "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.wiki.git",
+      "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.wiki.git",
+      "path_with_namespace": "lechuckroh/gitlab-slack-notifier.wiki",
+      "default_branch": "main"
+    },
+    "object_attributes": {
+      "content": "markdown",
+      "format": "markdown",
+      "message": "Create first wiki page",
+      "title": "first wiki page",
+      "slug": "first-wiki-page",
+      "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/wikis/first-wiki-page",
+      "action": "create",
+      "diff_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/wikis/first-wiki-page/diff?version_id=c905471ee24fab58efd6ffbd4b539dc3f321ac87"
+    }
+  }
+}

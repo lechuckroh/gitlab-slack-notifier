@@ -1,0 +1,105 @@
+{
+  "body": {
+    "object_kind": "note",
+    "event_type": "note",
+    "user": {
+      "id": 484254,
+      "name": "Lechuck Roh",
+      "username": "lechuckroh",
+      "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/484254/avatar.png",
+      "email": "[REDACTED]"
+    },
+    "project_id": 42038426,
+    "project": {
+      "id": 42038426,
+      "name": "gitlab-slack-notifier",
+      "description": "GitLab Webhook Slack notifier with custom message and filtering",
+      "web_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+      "avatar_url": null,
+      "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
+      "namespace": "Lechuck Roh",
+      "visibility_level": 20,
+      "path_with_namespace": "lechuckroh/gitlab-slack-notifier",
+      "default_branch": "master",
+      "ci_config_path": "",
+      "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+      "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git"
+    },
+    "object_attributes": {
+      "attachment": null,
+      "author_id": 484254,
+      "change_position": {
+        "base_sha": null,
+        "start_sha": null,
+        "head_sha": null,
+        "old_path": null,
+        "new_path": null,
+        "position_type": "text",
+        "old_line": null,
+        "new_line": null,
+        "line_range": null
+      },
+      "commit_id": "8bc6edc6439171db8f446936a6d176d33ac1411f",
+      "created_at": "2022-12-23 11:23:25 UTC",
+      "discussion_id": "2b5b94b55e3d76de9d04bdc68cd30dad83560152",
+      "id": 1219956922,
+      "line_code": "afa533c719d83117d1559cccfaebaec12a9c2acb_0_10",
+      "note": "commit comment",
+      "noteable_id": null,
+      "noteable_type": "Commit",
+      "original_position": {
+        "base_sha": "d46171e9b9844c76975766f06961472ad5c029e1",
+        "start_sha": "d46171e9b9844c76975766f06961472ad5c029e1",
+        "head_sha": "8bc6edc6439171db8f446936a6d176d33ac1411f",
+        "old_path": "nodejs/src/config.ts",
+        "new_path": "nodejs/src/config.ts",
+        "position_type": "text",
+        "old_line": null,
+        "new_line": 10,
+        "line_range": null
+      },
+      "position": {
+        "base_sha": "d46171e9b9844c76975766f06961472ad5c029e1",
+        "start_sha": "d46171e9b9844c76975766f06961472ad5c029e1",
+        "head_sha": "8bc6edc6439171db8f446936a6d176d33ac1411f",
+        "old_path": "nodejs/src/config.ts",
+        "new_path": "nodejs/src/config.ts",
+        "position_type": "text",
+        "old_line": null,
+        "new_line": 10,
+        "line_range": null
+      },
+      "project_id": 42038426,
+      "resolved_at": null,
+      "resolved_by_id": null,
+      "resolved_by_push": null,
+      "st_diff": null,
+      "system": false,
+      "type": "DiffNote",
+      "updated_at": "2022-12-23 11:23:25 UTC",
+      "updated_by_id": null,
+      "description": "commit comment",
+      "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/commit/8bc6edc6439171db8f446936a6d176d33ac1411f#note_1219956922"
+    },
+    "repository": {
+      "name": "gitlab-slack-notifier",
+      "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+      "description": "GitLab Webhook Slack notifier with custom message and filtering",
+      "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier"
+    },
+    "commit": {
+      "id": "8bc6edc6439171db8f446936a6d176d33ac1411f",
+      "message": "add node.js aws lambda applocation\n\n",
+      "title": "add node.js aws lambda applocation",
+      "timestamp": "2022-12-17T07:33:38+09:00",
+      "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/commit/8bc6edc6439171db8f446936a6d176d33ac1411f",
+      "author": {
+        "name": "Lechuck Roh",
+        "email": "[REDACTED]"
+      }
+    }
+  }
+}

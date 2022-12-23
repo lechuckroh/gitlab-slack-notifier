@@ -1,8 +1,0 @@
-{
-  "body": {
-    "object_kind": "test",
-    "event_type": "test",
-    "foo": "test",
-    "test_id": 1
-  }
-}
