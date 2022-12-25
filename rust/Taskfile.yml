@@ -4,14 +4,29 @@ version: '3'
 
 tasks:
 
-  _install-darwin:
+  _install-brew:
     cmds:
       - brew tap cargo-lambda/cargo-lambda
       - brew install cargo-lambda
 
-  _install-linux:
+  _install-cargo:
+    cmds:
+      - cargo install cargo-lambda
+
+  _install-pip3:
     cmds:
       - pip3 install cargo-lambda
+
+  _install-darwin:
+    cmds:
+      - task: '{{if lt .OS_VERSION "11"}}_install-cargo{{else}}_install-brew{{end}}'
+    vars:
+      OS_VERSION:
+        sh: sw_vers -productVersion
+
+  _install-linux:
+    cmds:
+      - task: _install-pip3
 
   install:
     desc: "install required packages"
@@ -26,3 +41,16 @@ tasks:
   test:
     cmds:
       - cargo test -- --nocapture
+
+  ver1:
+    cmds:
+      - echo MacOS 10.x
+    preconditions:
+      - sh: "[[ $(sw_vers -productVersion) < 11 ]]"
+        msg: "10.x"
+  ver2:
+    cmds:
+      - echo MacOS 11.x
+    preconditions:
+      - sh: "[[ $(sw_vers -productVersion) >= 11 ]]"
+        msg: "11.x"

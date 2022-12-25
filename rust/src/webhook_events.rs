@@ -302,7 +302,6 @@ pub struct PushEvent {
 
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct TagPushEvent {
-    object_kind: String,
     event_name: String,
     before: String,
     after: String,
