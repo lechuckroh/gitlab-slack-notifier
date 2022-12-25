@@ -347,7 +347,7 @@ pub struct WikiPageEvent {
 
 #[derive(Deserialize, Debug, PartialEq)]
 #[serde(tag = "object_kind")]
-pub enum Body {
+pub enum WebhookEvent {
     #[serde(rename = "issue")]
     Issue(IssueEvent),
     #[serde(rename = "merge_request")]
@@ -364,25 +364,20 @@ pub enum Body {
     Wiki(WikiPageEvent),
 }
 
-#[derive(Deserialize, Debug, PartialEq)]
-pub struct Payload {
-    body: Body,
-}
-
 // --------------------------------------------------
 // Functions
 // --------------------------------------------------
 
-// pub fn payload_from_str(s: &str) -> Result<Payload, Box<dyn Error>> {
-//     let payload = serde_json::from_str(s)?;
-//     Ok(payload)
-// }
+pub fn payload_from_str(s: &str) -> Result<WebhookEvent, Box<dyn Error>> {
+    let payload = serde_json::from_str(s)?;
+    Ok(payload)
+}
 
-pub fn payload_from_file<P: AsRef<Path>>(path: P) -> Result<Payload, Box<dyn Error>> {
+pub fn webhook_event_from_file<P: AsRef<Path>>(path: P) -> Result<WebhookEvent, Box<dyn Error>> {
     let file = File::open(path)?;
     let reader = BufReader::new(file);
-    let payload = serde_json::from_reader(reader)?;
-    Ok(payload)
+    let event = serde_json::from_reader(reader)?;
+    Ok(event)
 }
 
 // --------------------------------------------------
@@ -391,81 +386,81 @@ pub fn payload_from_file<P: AsRef<Path>>(path: P) -> Result<Payload, Box<dyn Err
 
 #[test]
 fn it_issue_open_event_from_file() {
-    let payload = payload_from_file("../events/issue-open.json").unwrap();
-    match payload.body {
-        Body::Issue(_) => assert!(true),
+    let event = webhook_event_from_file("../events/issue-open.json").unwrap();
+    match event {
+        WebhookEvent::Issue(_) => assert!(true),
         _ => assert!(false, "not handled")
     }
 }
 
 #[test]
 fn it_note_commit_event_from_file() {
-    let payload = payload_from_file("../events/note-commit.json").unwrap();
-    match payload.body {
-        Body::Note(_) => assert!(true),
+    let event = webhook_event_from_file("../events/note-commit.json").unwrap();
+    match event {
+        WebhookEvent::Note(_) => assert!(true),
         _ => assert!(false, "not handled")
     }
 }
 
 #[test]
 fn it_note_issue_event_from_file() {
-    let payload = payload_from_file("../events/note-issue.json").unwrap();
-    match payload.body {
-        Body::Note(_) => assert!(true),
+    let event = webhook_event_from_file("../events/note-issue.json").unwrap();
+    match event {
+        WebhookEvent::Note(_) => assert!(true),
         _ => assert!(false, "not handled")
     }
 }
 
 #[test]
 fn it_note_mr_event_from_file() {
-    let payload = payload_from_file("../events/note-mr-mergeable.json").unwrap();
-    match payload.body {
-        Body::Note(_) => assert!(true),
+    let event = webhook_event_from_file("../events/note-mr-mergeable.json").unwrap();
+    match event {
+        WebhookEvent::Note(_) => assert!(true),
         _ => assert!(false, "not handled")
     }
 }
 
 #[test]
 fn it_push_event_from_file() {
-    let payload = payload_from_file("../events/push.json").unwrap();
-    match payload.body {
-        Body::Push(_) => assert!(true),
+    let event = webhook_event_from_file("../events/push.json").unwrap();
+    match event {
+        WebhookEvent::Push(_) => assert!(true),
         _ => assert!(false, "not handled")
     }
 }
 
 #[test]
 fn it_note_snippet_event_from_file() {
-    let payload = payload_from_file("../events/note-snippet.json").unwrap();
-    match payload.body {
-        Body::Note(_) => assert!(true),
+    let event = webhook_event_from_file("../events/note-snippet.json").unwrap();
+    match event {
+        WebhookEvent::Note(_) => assert!(true),
         _ => assert!(false, "not handled")
     }
 }
 
 #[test]
 fn it_mr_open_event_from_file() {
-    let payload = payload_from_file("../events/mr-open.json").unwrap();
-    match payload.body {
-        Body::MR(_) => assert!(true),
+    let event = webhook_event_from_file("../events/mr-open.json").unwrap();
+    match event {
+        WebhookEvent::MR(_) => assert!(true),
         _ => assert!(false, "not handled")
     }
 }
 
 #[test]
 fn it_tag_push_event_from_file() {
-    let payload = payload_from_file("../events/tag-push.json").unwrap();
-    match payload.body {
-        Body::TagPush(_) => assert!(true),
+    let event = webhook_event_from_file("../events/tag-push.json").unwrap();
+    match event {
+        WebhookEvent::TagPush(_) => assert!(true),
         _ => assert!(false, "not handled")
     }
 }
 
 #[test]
 fn it_wiki_create_event_from_file() {
-    let payload = payload_from_file("../events/wiki-create.json").unwrap();
-    match payload.body {
-        Body::Wiki(_) => assert!(true),
+    let event = webhook_event_from_file("../events/wiki-create.json").unwrap();
+    match event {
+        WebhookEvent::Wiki(_) => assert!(true),
         _ => assert!(false, "not handled")
     }
 }

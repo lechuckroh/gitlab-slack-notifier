@@ -12,7 +12,6 @@ import { handleWikiPageEvent } from "./wiki-page";
 export interface HandleEventStatus {
   status: "ignored" | "sent" | "error";
   message?: Record<string, unknown>;
-  response?: unknown;
   error?: string;
 }
 

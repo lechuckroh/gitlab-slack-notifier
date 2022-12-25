@@ -4,29 +4,29 @@ version: '3'
 
 tasks:
 
-  _install-brew:
+  install-brew:
     cmds:
       - brew tap cargo-lambda/cargo-lambda
       - brew install cargo-lambda
 
-  _install-cargo:
+  install-cargo:
     cmds:
       - cargo install cargo-lambda
 
-  _install-pip3:
+  install-pip3:
     cmds:
       - pip3 install cargo-lambda
 
   _install-darwin:
     cmds:
-      - task: '{{if lt .OS_VERSION "11"}}_install-cargo{{else}}_install-brew{{end}}'
+      - task: '{{if lt .OS_VERSION "11"}}install-cargo{{else}}install-brew{{end}}'
     vars:
       OS_VERSION:
         sh: sw_vers -productVersion
 
   _install-linux:
     cmds:
-      - task: _install-pip3
+      - task: install-pip3
 
   install:
     desc: "install required packages"

@@ -1,121 +1,119 @@
 {
-  "body": {
-    "object_kind": "push",
-    "event_name": "push",
-    "before": "5a0a00fea62ef4d3300f5780fa6a44b1138a00fd",
-    "after": "9c5f8dd7bdc23f935e556bcd1761f452a9e51e60",
-    "ref": "refs/heads/feature/rust",
-    "checkout_sha": "9c5f8dd7bdc23f935e556bcd1761f452a9e51e60",
-    "message": null,
-    "user_id": 484254,
-    "user_name": "Lechuck Roh",
-    "user_username": "lechuckroh",
-    "user_email": "",
-    "user_avatar": "https://gitlab.com/uploads/-/system/user/avatar/484254/avatar.png",
-    "project_id": 42038426,
-    "project": {
-      "id": 42038426,
-      "name": "gitlab-slack-notifier",
-      "description": "GitLab Webhook Slack notifier with custom message and filtering",
-      "web_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
-      "avatar_url": null,
-      "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
-      "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
-      "namespace": "Lechuck Roh",
-      "visibility_level": 20,
-      "path_with_namespace": "lechuckroh/gitlab-slack-notifier",
-      "default_branch": "master",
-      "ci_config_path": "",
-      "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
-      "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
-      "ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
-      "http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git"
-    },
-    "commits": [
-      {
-        "id": "706205c7ca6a1cb14df0bd1b9f5d19dbf3ea56f0",
-        "message": "WIP\n\n",
-        "title": "WIP",
-        "timestamp": "2022-12-21T23:27:43+09:00",
-        "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/commit/706205c7ca6a1cb14df0bd1b9f5d19dbf3ea56f0",
-        "author": {
-          "name": "Lechuck Roh",
-          "email": "[REDACTED]"
-        },
-        "added": [
-          "events/mr-approve.json",
-          "events/mr-close.json",
-          "events/mr-merge.json",
-          "events/mr-open.json",
-          "events/note-mr-conflict.json",
-          "events/note-mr-mergeable.json",
-          "events/note-mr-sonarqube-can-be-merged.json",
-          "events/note-mr-sonarqube-conflict.json",
-          "events/note.json",
-          "events/pipeline-failed.json",
-          "events/test.json",
-          "rust/.gitignore",
-          "rust/Cargo.lock",
-          "rust/Cargo.toml",
-          "rust/Taskfile.yml",
-          "rust/src/events.rs",
-          "rust/src/lib.rs",
-          "rust/src/main.rs",
-          "rust/tests/slack.rs"
-        ],
-        "modified": [
-          "nodejs/tests/unit/lambda.test.ts",
-          "terraform/aws-lambda/main.tf",
-          "terraform/aws-lambda/vars.tf"
-        ],
-        "removed": [
-          "nodejs/events/mr-open.json",
-          "nodejs/events/note-mr-can-be-merged.json"
-        ]
+  "object_kind": "push",
+  "event_name": "push",
+  "before": "5a0a00fea62ef4d3300f5780fa6a44b1138a00fd",
+  "after": "9c5f8dd7bdc23f935e556bcd1761f452a9e51e60",
+  "ref": "refs/heads/feature/rust",
+  "checkout_sha": "9c5f8dd7bdc23f935e556bcd1761f452a9e51e60",
+  "message": null,
+  "user_id": 484254,
+  "user_name": "Lechuck Roh",
+  "user_username": "lechuckroh",
+  "user_email": "",
+  "user_avatar": "https://gitlab.com/uploads/-/system/user/avatar/484254/avatar.png",
+  "project_id": 42038426,
+  "project": {
+    "id": 42038426,
+    "name": "gitlab-slack-notifier",
+    "description": "GitLab Webhook Slack notifier with custom message and filtering",
+    "web_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+    "avatar_url": null,
+    "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+    "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
+    "namespace": "Lechuck Roh",
+    "visibility_level": 20,
+    "path_with_namespace": "lechuckroh/gitlab-slack-notifier",
+    "default_branch": "master",
+    "ci_config_path": "",
+    "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+    "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+    "ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+    "http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git"
+  },
+  "commits": [
+    {
+      "id": "706205c7ca6a1cb14df0bd1b9f5d19dbf3ea56f0",
+      "message": "WIP\n\n",
+      "title": "WIP",
+      "timestamp": "2022-12-21T23:27:43+09:00",
+      "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/commit/706205c7ca6a1cb14df0bd1b9f5d19dbf3ea56f0",
+      "author": {
+        "name": "Lechuck Roh",
+        "email": "[REDACTED]"
       },
-      {
-        "id": "9c5f8dd7bdc23f935e556bcd1761f452a9e51e60",
-        "message": "WIP 2\n\n",
-        "title": "WIP 2",
-        "timestamp": "2022-12-23T20:51:26+09:00",
-        "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/commit/9c5f8dd7bdc23f935e556bcd1761f452a9e51e60",
-        "author": {
-          "name": "Lechuck Roh",
-          "email": "[REDACTED]"
-        },
-        "added": [
-          "events/issue-open.json",
-          "events/note-commit.json",
-          "events/note-issue.json",
-          "events/note-snippet.json",
-          "rust/src/webhook_events.rs"
-        ],
-        "modified": [
-          "rust/src/lib.rs"
-        ],
-        "removed": [
-          "events/mr-approve.json",
-          "events/mr-close.json",
-          "events/mr-merge.json",
-          "events/note-mr-conflict.json",
-          "events/note-mr-sonarqube-can-be-merged.json",
-          "events/note-mr-sonarqube-conflict.json",
-          "events/note.json",
-          "events/test.json"
-        ]
-      }
-    ],
-    "total_commits_count": 2,
-    "push_options": {
+      "added": [
+        "events/mr-approve.json",
+        "events/mr-close.json",
+        "events/mr-merge.json",
+        "events/mr-open.json",
+        "events/note-mr-conflict.json",
+        "events/note-mr-mergeable.json",
+        "events/note-mr-sonarqube-can-be-merged.json",
+        "events/note-mr-sonarqube-conflict.json",
+        "events/note.json",
+        "events/pipeline-failed.json",
+        "events/test.json",
+        "rust/.gitignore",
+        "rust/Cargo.lock",
+        "rust/Cargo.toml",
+        "rust/Taskfile.yml",
+        "rust/src/events.rs",
+        "rust/src/lib.rs",
+        "rust/src/main.rs",
+        "rust/tests/slack.rs"
+      ],
+      "modified": [
+        "nodejs/tests/unit/lambda.test.ts",
+        "terraform/aws-lambda/main.tf",
+        "terraform/aws-lambda/vars.tf"
+      ],
+      "removed": [
+        "nodejs/events/mr-open.json",
+        "nodejs/events/note-mr-can-be-merged.json"
+      ]
     },
-    "repository": {
-      "name": "gitlab-slack-notifier",
-      "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
-      "description": "GitLab Webhook Slack notifier with custom message and filtering",
-      "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
-      "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
-      "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
-      "visibility_level": 20
+    {
+      "id": "9c5f8dd7bdc23f935e556bcd1761f452a9e51e60",
+      "message": "WIP 2\n\n",
+      "title": "WIP 2",
+      "timestamp": "2022-12-23T20:51:26+09:00",
+      "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/commit/9c5f8dd7bdc23f935e556bcd1761f452a9e51e60",
+      "author": {
+        "name": "Lechuck Roh",
+        "email": "[REDACTED]"
+      },
+      "added": [
+        "events/issue-open.json",
+        "events/note-commit.json",
+        "events/note-issue.json",
+        "events/note-snippet.json",
+        "rust/src/webhook_events.rs"
+      ],
+      "modified": [
+        "rust/src/lib.rs"
+      ],
+      "removed": [
+        "events/mr-approve.json",
+        "events/mr-close.json",
+        "events/mr-merge.json",
+        "events/note-mr-conflict.json",
+        "events/note-mr-sonarqube-can-be-merged.json",
+        "events/note-mr-sonarqube-conflict.json",
+        "events/note.json",
+        "events/test.json"
+      ]
     }
+  ],
+  "total_commits_count": 2,
+  "push_options": {
+  },
+  "repository": {
+    "name": "gitlab-slack-notifier",
+    "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+    "description": "GitLab Webhook Slack notifier with custom message and filtering",
+    "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier",
+    "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
+    "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+    "visibility_level": 20
   }
 }
