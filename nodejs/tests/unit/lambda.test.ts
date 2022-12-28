@@ -121,7 +121,7 @@ describe("MergeRequest event", function () {
     const payload = JSON.parse(
       fs.readFileSync("../events/mr-open.json", "utf8")
     );
-    const event = createLambdaEvent(JSON.stringify(payload.body));
+    const event = createLambdaEvent(JSON.stringify(payload));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
 
     expect(result.statusCode).toEqual(200);
@@ -129,7 +129,7 @@ describe("MergeRequest event", function () {
       status: "sent",
       message: {
         type: "mrkdwn",
-        text: ":blush: Admin opend <http://example.com/diaspora/merge_requests/1|Gitlab Test MR !1> *MS-Viewport*[`API`] and assigned to User1.\n`ms-viewport` → `master`",
+        text: ":blush: LechuckRoh opened <https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1|gitlab-slack-notifier MR !1> *Rust Lambda*[`enhancement`].\n`feature/rust` → `develop`",
       },
     });
   });
@@ -138,7 +138,7 @@ describe("MergeRequest event", function () {
     const payload = JSON.parse(
       fs.readFileSync("../events/mr-approve.json", "utf8")
     );
-    const event = createLambdaEvent(JSON.stringify(payload.body));
+    const event = createLambdaEvent(JSON.stringify(payload));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
 
     expect(result.statusCode).toEqual(200);
@@ -146,7 +146,7 @@ describe("MergeRequest event", function () {
       status: "sent",
       message: {
         type: "mrkdwn",
-        text: ":white_check_mark: Admin approved User2's <https://example.com/diaspora/merge_requests/1|Gitlab Test MR !1> *MS-Viewport*.",
+        text: ":white_check_mark: LechuckRoh approved <https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1|gitlab-slack-notifier MR !1> *Rust Lambda*.",
       },
     });
   });
@@ -155,7 +155,7 @@ describe("MergeRequest event", function () {
     const payload = JSON.parse(
       fs.readFileSync("../events/mr-merge.json", "utf8")
     );
-    const event = createLambdaEvent(JSON.stringify(payload.body));
+    const event = createLambdaEvent(JSON.stringify(payload));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
 
     expect(result.statusCode).toEqual(200);
@@ -163,7 +163,7 @@ describe("MergeRequest event", function () {
       status: "sent",
       message: {
         type: "mrkdwn",
-        text: ":tada: Admin merged User2's <http://example.com/diaspora/merge_requests/1|Gitlab Test MR !1> *MS-Viewport*.",
+        text: ":tada: LechuckRoh merged <https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1|gitlab-slack-notifier MR !1> *Rust Lambda*.",
       },
     });
   });
@@ -171,10 +171,11 @@ describe("MergeRequest event", function () {
 
 describe("Note event", function () {
   it("verifies comment on merge request with labels and conflict", async () => {
+    // FIXME: json 수정
     const payload = JSON.parse(
       fs.readFileSync("../events/note-mr-conflict.json", "utf8")
     );
-    const event = createLambdaEvent(JSON.stringify(payload.body));
+    const event = createLambdaEvent(JSON.stringify(payload));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
 
     expect(result.statusCode).toEqual(200);
@@ -188,10 +189,11 @@ describe("Note event", function () {
   });
 
   it("ignores sonarqube code analysis", async () => {
+    // FIXME: json 수정
     const payload = JSON.parse(
       fs.readFileSync("../events/note-mr-sonarqube-can-be-merged.json", "utf8")
     );
-    const event = createLambdaEvent(JSON.stringify(payload.body));
+    const event = createLambdaEvent(JSON.stringify(payload));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
 
     expect(result.statusCode).toEqual(200);
@@ -201,10 +203,11 @@ describe("Note event", function () {
   });
 
   it("verifies sonarqybe code analysis with conflict", async () => {
+    // FIXME: json 수정
     const payload = JSON.parse(
       fs.readFileSync("../events/note-mr-sonarqube-conflict.json", "utf8")
     );
-    const event = createLambdaEvent(JSON.stringify(payload.body));
+    const event = createLambdaEvent(JSON.stringify(payload));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
 
     expect(result.statusCode).toEqual(200);
@@ -223,7 +226,7 @@ describe("Pipeline event", function () {
     const payload = JSON.parse(
       fs.readFileSync("../events/pipeline-failed.json", "utf8")
     );
-    const event = createLambdaEvent(JSON.stringify(payload.body));
+    const event = createLambdaEvent(JSON.stringify(payload));
     const result: APIGatewayProxyResult = await lambdaHandler(event);
 
     expect(result.statusCode).toEqual(200);

@@ -1,13 +1,14 @@
 {
-  "object_kind": "merge_request",
-  "event_type": "merge_request",
+  "object_kind": "note",
+  "event_type": "note",
   "user": {
     "id": 484254,
-    "name": "LechuckRoh",
+    "name": "Lechuck Roh",
     "username": "lechuckroh",
     "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/484254/avatar.png",
     "email": "[REDACTED]"
   },
+  "project_id": 42038426,
   "project": {
     "id": 42038426,
     "name": "gitlab-slack-notifier",
@@ -16,7 +17,7 @@
     "avatar_url": null,
     "git_ssh_url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
     "git_http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git",
-    "namespace": "LechuckRoh",
+    "namespace": "Lechuck Roh",
     "visibility_level": 20,
     "path_with_namespace": "lechuckroh/gitlab-slack-notifier",
     "default_branch": "master",
@@ -27,6 +28,38 @@
     "http_url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier.git"
   },
   "object_attributes": {
+    "attachment": null,
+    "author_id": 484254,
+    "change_position": null,
+    "commit_id": null,
+    "created_at": "2022-12-21 14:09:50 UTC",
+    "discussion_id": "ffae00b38793ccb62898fc0654b298bc846d51f6",
+    "id": 1217658098,
+    "line_code": null,
+    "note": "code review here",
+    "noteable_id": 195716848,
+    "noteable_type": "MergeRequest",
+    "original_position": null,
+    "position": null,
+    "project_id": 42038426,
+    "resolved_at": null,
+    "resolved_by_id": null,
+    "resolved_by_push": null,
+    "st_diff": null,
+    "system": false,
+    "type": null,
+    "updated_at": "2022-12-21 14:09:50 UTC",
+    "updated_by_id": null,
+    "description": "code review here",
+    "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1#note_1217658098"
+  },
+  "repository": {
+    "name": "gitlab-slack-notifier",
+    "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
+    "description": "GitLab Webhook Slack notifier with custom message and filtering",
+    "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier"
+  },
+  "merge_request": {
     "assignee_id": 484254,
     "author_id": 484254,
     "created_at": "2022-12-21 13:46:11 UTC",
@@ -41,7 +74,7 @@
     "merge_params": {
       "force_remove_source_branch": "1"
     },
-    "merge_status": "preparing",
+    "merge_status": "can_be_merged",
     "merge_user_id": null,
     "merge_when_pipeline_succeeds": false,
     "milestone_id": null,
@@ -52,7 +85,7 @@
     "target_project_id": 42038426,
     "time_estimate": 0,
     "title": "Rust Lambda",
-    "updated_at": "2022-12-21 13:46:11 UTC",
+    "updated_at": "2022-12-21 14:09:50 UTC",
     "updated_by_id": null,
     "url": "https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1",
     "source": {
@@ -131,51 +164,6 @@
     "state": "opened",
     "blocking_discussions_resolved": true,
     "first_contribution": false,
-    "detailed_merge_status": "checking",
-    "action": "open"
-  },
-  "labels": [
-    {
-      "id": 28413248,
-      "title": "enhancement",
-      "color": "#a2eeef",
-      "project_id": 42038426,
-      "created_at": "2022-12-21 12:37:07 UTC",
-      "updated_at": "2022-12-21 12:37:07 UTC",
-      "template": false,
-      "description": null,
-      "type": "ProjectLabel",
-      "group_id": null
-    }
-  ],
-  "changes": {
-    "merge_status": {
-      "previous": "unchecked",
-      "current": "preparing"
-    }
-  },
-  "repository": {
-    "name": "gitlab-slack-notifier",
-    "url": "git@gitlab.com:lechuckroh/gitlab-slack-notifier.git",
-    "description": "GitLab Webhook Slack notifier with custom message and filtering",
-    "homepage": "https://gitlab.com/lechuckroh/gitlab-slack-notifier"
-  },
-  "assignees": [
-    {
-      "id": 484254,
-      "name": "LechuckRoh",
-      "username": "lechuckroh",
-      "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/484254/avatar.png",
-      "email": "[REDACTED]"
-    }
-  ],
-  "reviewers": [
-    {
-      "id": 484254,
-      "name": "LechuckRoh",
-      "username": "lechuckroh",
-      "avatar_url": "https://gitlab.com/uploads/-/system/user/avatar/484254/avatar.png",
-      "email": "[REDACTED]"
-    }
-  ]
+    "detailed_merge_status": "mergeable"
+  }
 }

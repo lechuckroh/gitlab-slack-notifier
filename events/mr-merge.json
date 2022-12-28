@@ -128,11 +128,11 @@
         "group_id": null
       }
     ],
-    "state": "opened",
+    "state": "merged",
     "blocking_discussions_resolved": true,
     "first_contribution": false,
     "detailed_merge_status": "checking",
-    "action": "open"
+    "action": "merge"
   },
   "labels": [
     {
