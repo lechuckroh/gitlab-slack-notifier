@@ -53,17 +53,14 @@ mod tests {
         let result = function_handler(lambda_event).await.unwrap();
         assert_eq!(result, HandleEventStatus {
             status: "sent".to_string(),
-            message: Some(SlackMessage {
-                r#type: "mrkdwn".to_string(),
-                text: ":blush: LechuckRoh opened <https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1|gitlab-slack-notifier MR !1> *Rust Lambda*[`enhancement`].\n`feature/rust` → `develop`".to_string(),
-            }),
+            message: Some(SlackMessage::markdown(":blush: LechuckRoh opened <https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1|gitlab-slack-notifier MR !1> *Rust Lambda*[`enhancement`].\n`feature/rust` → `develop`")),
             error: None,
         });
     }
 
     #[tokio::test]
     async fn test_merge_request_approve() {
-        let webhook_event = webhook_event_from_file("../events/mr-approved.json").unwrap();
+        let webhook_event = webhook_event_from_file("../events/mr-approve.json").unwrap();
         let lambda_event = LambdaEvent {
             payload: Request { body: webhook_event },
             context: Context::default(),
@@ -71,10 +68,7 @@ mod tests {
         let result = function_handler(lambda_event).await.unwrap();
         assert_eq!(result, HandleEventStatus {
             status: "sent".to_string(),
-            message: Some(SlackMessage {
-                r#type: "mrkdwn".to_string(),
-                text: ":white_check_mark: LechuckRoh approved <https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1|gitlab-slack-notifier MR !1> *Rust Lambda*.".to_string(),
-            }),
+            message: Some(SlackMessage::markdown(":white_check_mark: LechuckRoh approved <https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1|gitlab-slack-notifier MR !1> *Rust Lambda*.")),
             error: None,
         });
     }
@@ -89,10 +83,7 @@ mod tests {
         let result = function_handler(lambda_event).await.unwrap();
         assert_eq!(result, HandleEventStatus {
             status: "sent".to_string(),
-            message: Some(SlackMessage {
-                r#type: "mrkdwn".to_string(),
-                text: ":tada: LechuckRoh merged <https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1|gitlab-slack-notifier MR !1> *Rust Lambda*.".to_string(),
-            }),
+            message: Some(SlackMessage::markdown(":tada: LechuckRoh merged <https://gitlab.com/lechuckroh/gitlab-slack-notifier/-/merge_requests/1|gitlab-slack-notifier MR !1> *Rust Lambda*.")),
             error: None,
         });
     }
@@ -107,10 +98,7 @@ mod tests {
         let result = function_handler(lambda_event).await.unwrap();
         assert_eq!(result, HandleEventStatus {
             status: "sent".to_string(),
-            message: Some(SlackMessage {
-                r#type: "mrkdwn".to_string(),
-                text: ":fire: Admin Build pipeline failed on <http://192.168.64.1:3005/gitlab-org/gitlab-test|Gitlab Test project> `master`.\n- `User<user@gitlab.com>` *test*".to_string(),
-            }),
+            message: Some(SlackMessage::markdown(":fire: Admin Build pipeline failed on <http://192.168.64.1:3005/gitlab-org/gitlab-test|Gitlab Test project> `master`.\n- `User<user@gitlab.com>` *test*")),
             error: None,
         });
     }

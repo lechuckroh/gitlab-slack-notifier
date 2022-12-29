@@ -7,6 +7,15 @@ pub struct SlackMessage {
     pub text: String,
 }
 
+impl SlackMessage {
+    pub fn markdown(text: &str) -> SlackMessage {
+        SlackMessage {
+            r#type: "mrkdwn".to_string(),
+            text: text.to_string(),
+        }
+    }
+}
+
 #[derive(Serialize, Debug, PartialEq)]
 pub struct HandleEventStatus {
     pub status: String,
@@ -20,6 +29,20 @@ impl HandleEventStatus {
             status: "ignored".to_string(),
             message: None,
             error: None,
+        }
+    }
+    pub fn sent(message: SlackMessage) -> HandleEventStatus {
+        HandleEventStatus {
+            status: "sent".to_string(),
+            message: Some(message),
+            error: None,
+        }
+    }
+    pub fn error(msg: String) -> HandleEventStatus {
+        HandleEventStatus {
+            status: "error".to_string(),
+            message: None,
+            error: Some(msg),
         }
     }
 }
@@ -37,8 +60,26 @@ fn handle_note_event(_: NoteEvent) -> HandleEventStatus {
 }
 
 fn handle_pipeline_event(event: PipelineEvent) -> HandleEventStatus {
+    let pipeline = event.object_attributes;
+    if pipeline.status == "failed" {
+        let commit = event.commit;
+        let merge_request = event.merge_request;
+        let project = event.project;
 
-    HandleEventStatus::ignored()
+        let action_user = match merge_request {
+            Some(_) => event.user.name.as_str(),
+            None => ""
+        };
+        let project_link = format!("<{}|{} project>", project.web_url, project.name);
+        let message = SlackMessage {
+            r#type: "mkrdwn".to_string(),
+            text: format!(":fire: {} Build pipeline failed on {} `{}`.\n- `{}` *{}*", action_user, project_link, pipeline.r#ref, commit.author.name, commit.title),
+        };
+
+        HandleEventStatus::sent(message)
+    } else {
+        HandleEventStatus::ignored()
+    }
 }
 
 fn handle_push_event(_: PushEvent) -> HandleEventStatus {
