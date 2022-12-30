@@ -39,7 +39,7 @@
   },
   "user": {
     "id": 1,
-    "name": "Administrator",
+    "name": "Admin",
     "username": "root",
     "avatar_url": "http://www.gravatar.com/avatar/e32bd13e2add097461cb96824b7a829c?s=80\u0026d=identicon",
     "email": "user_email@gitlab.com"
@@ -94,7 +94,7 @@
       "allow_failure": false,
       "user": {
         "id": 1,
-        "name": "Administrator",
+        "name": "Admin",
         "username": "root",
         "avatar_url": "http://www.gravatar.com/avatar/e32bd13e2add097461cb96824b7a829c?s=80\u0026d=identicon",
         "email": "admin@example.com"
@@ -126,7 +126,7 @@
       "allow_failure": false,
       "user": {
         "id": 1,
-        "name": "Administrator",
+        "name": "Admin",
         "username": "root",
         "avatar_url": "http://www.gravatar.com/avatar/e32bd13e2add097461cb96824b7a829c?s=80\u0026d=identicon",
         "email": "admin@example.com"
@@ -165,7 +165,7 @@
       "allow_failure": false,
       "user": {
         "id": 1,
-        "name": "Administrator",
+        "name": "Admin",
         "username": "root",
         "avatar_url": "http://www.gravatar.com/avatar/e32bd13e2add097461cb96824b7a829c?s=80\u0026d=identicon",
         "email": "admin@example.com"
@@ -203,7 +203,7 @@
       "allow_failure": false,
       "user": {
         "id": 1,
-        "name": "Administrator",
+        "name": "Admin",
         "username": "root",
         "avatar_url": "http://www.gravatar.com/avatar/e32bd13e2add097461cb96824b7a829c?s=80\u0026d=identicon",
         "email": "admin@example.com"
@@ -241,7 +241,7 @@
       "allow_failure": false,
       "user": {
         "id": 1,
-        "name": "Administrator",
+        "name": "Admin",
         "username": "root",
         "avatar_url": "http://www.gravatar.com/avatar/e32bd13e2add097461cb96824b7a829c?s=80\u0026d=identicon",
         "email": "admin@example.com"
